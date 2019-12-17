@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>交互式学习</title>
+<style type="text/css">
+
+*{margin:0;padding:0;}
+/*.navtou{
+position:absolute;;top:0px;
+width: 100%;height: 50px;
+background-color:#ADD8E6;}*/
+
+html,body{
+height:2000px;width:1050px;
+}
+
+.nav{
+position:absolute;top:0px;left:0px;
+width: 100%;height: 50px;
+background-color:#ADD8E6;filter:alpha(opacity=60);}
+
+.nav ul{list-style-type: none;margin: 0px auto;
+width: 955px;}
+
+.nav li{display:inlineblock;
+height:50px;float:left;text-align:center;
+font-weight:bold;width:150px;
+margin-left:2px;position:relative;z-index:1;
+line-height:45px;color:#755B5C}
+
+.nav li a{display : inline-block;width: 150px;height: 50px;
+padding: 0px;margin:0px;
+font-weight:bold;/*字体加粗*/
+font-family: Microsoft Yahei;/*字体样式*/
+line-height: 50px;background-color: #87CEEB;
+color:#000000;text-align: center;text-decoration: none;
+font-size: 15px;border:0px;
+filter:alpha(opacity=60);}
+
+
+.new-nav li{margin-left:0;height:50px;clear:both;}
+
+.nav li a{display:inline-block;height:50px;
+text-decoration:none;color:#755B5C;width:150px;
+line-height:45px;}
+/*下拉内容格式*/
+.new-nav{list-style-type:none;display:none;
+min-width:100px;background-color: #87CEEB;}
+/*.new-nav a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}*/
+
+/*.nav li:hover{color:black;}*/
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.nav li a:hover{color:black;}
+/* 在鼠标移上去后显示下拉菜单 */
+.new:hover .new-nav{display:block;}
+
+.content{
+width:1000px;height:600px;margin-bottom:20px;position:absolute;top:30px;
+}
+.dibu{
+    position:absolute;
+    top:700px;
+height:300px;
+width:1350px;
+background-color:red;
+margin-top:900px auto；
+}
+.dibu .wenti{
+height:300px;
+width:300px;
+float:left;
+background-color:yellow;
+}
+.dibu .wenti .b{
+weight:300px;
+width:300px;
+}
+.dibu .yy{
+height:300px;
+width:650px;
+float:left;
+margin-left:0px;
+background-color:#CAffff;
+padding-left:100px;
+}
+.yy h3 {
+            text-align: center;
+            color: block;
+        }
+
+        .massge {
+            height: 200px;
+            width: 300px;
+            color: block;
+            overflow-y: auto;
+        }
+
+        .massge audio {
+            height: 20px;
+            width: 250px;
+        }
+.dibu .tt{
+height:300px;
+width:300px;
+float:left;
+margin-left:0px;
+background-color:green;}
+
+.dibu .tt .c{
+weight:300px;
+width:300px;
+}
+
+.right_nav{
+position:absolute;top:50px;left:0px;
+width: 200px;height:500px;
+background-color:#ADD8E6;position:local;
+font-family: Microsoft Yahei;/*字体样式*/
+list-style-type: none;padding-top:100px;
+}
+
+.right_nav ul{width:200px;list-style-type: none; }
+
+.right_nav li{height:50px;width:200px;}
+
+.right_nav a{display : inline-block;width:200px;
+position:absolute;left:0px;
+height: 50px;font-weight:bold;/*字体加粗*/
+font-family: Microsoft Yahei;/*字体样式*/
+line-height: 50px;/*行间距*/
+background-color: #ADD8E6;
+color:#000000;text-align: center;text-decoration: none;
+font-size: 20px;border:0px;}
+
+</style>
+</head>
+
+<body>
+<img src="tupian/qqqq.png" id="a" height:500px;>      
+<div class="nav">	
+<ul class="daohang">
+
+<li><a href="https://www.baidu.com">首页</a>
+</li>
+			
+<li><a href="https://xin.baidu.com/feedback/official?from=baidu&type=gw">个人资料</a>
+</li>
+			
+<li><a href="http://cn.chinadaily.com.cn/">校内新闻</a>
+</li>
+			
+<li><a href="">个人课表</a>
+</li>
+
+<li class="new">			
+                    <a href="">学习功能</a>
+                    <ul class="new-nav">
+                        <li><a href="https://y.qq.com/">通用能力</a></li>
+                        <li><a href="">公共必修</a></li>
+                        <li><a href="">专业必修</a></li>
+                    </ul>
+                </li>
+
+                  <li><a href="">个人中心</a></li>
+                  </ul>
+</div>
+<div class="right_nav" node-type="fixed_nav">
+<ul class="caidan">
+<hr><li><a href="https://weibo.com/">课程情况</a>
+</li><hr></br>
+<li><a href="https://weibo.com/">论文专区</a>
+</li><hr></br>
+<li><a href="https://weibo.com/">备战考研</a>
+</li><hr></br>
+<li><a href="https://weibo.com/">课程反馈</a>
+</li><hr></br>
+<li><a href="https://weibo.com/">教师意见</a>
+</li><hr></br>
+<li><a href="https://weibo.com/">成绩查询</a>
+</li><hr></br>
+<li><a href="https://weibo.com/">其他更多</a>
+</li><hr></br>
+</ul>
+</div>
+<div class="content">
+<div style="margin-left:300px">
+<video width="800" height="600"  controls id="videoPlayer">
+  <source src="tupian/wwww.ogg" type="video/ogg">
+  <source src="tupian/wwww.mp4" type="video/mp4">
+ <source src="tupian/wwww.qlv" type="video/qlv">
+ <source src="tupian/wwww.webm" type="video/webm">
+<object data="tupian/wwww.mp4" width="500" height="300">
+   <embed width="500" height="300" src="tupian/wwww.mp4">
+  </object>
+ 
+</video>
+</div>
+</div>
+
+<div class="dibu">
+       <div class="wenti">  
+      <img src="tupian/gougou.gif  "class="b" >
+</div>
+       <div class="yy" >
+ <h3>向老师提问</h3>
+                <div class="massge" id="massge">
+
+                </div>
+                <div class="weben">
+                    <form name="input">
+                        <input type="text" name="qs" placeholder=" 请输入你的问题" id="qst">
+                        <input type="button" value="录音" onclick="luyin()">
+                        <input type="button" value="提交" onclick="sendAll()"><br>
+                        <p></p>
+
+                    </form>
+                </div>
+</div>
+
+       <div class="tt">
+<img src="tupian/gougou.gif   "class="c" >
+      </div>
+</div>
+</body>	
+
+<script>
+    //监听播放时间
+    var video = document.getElementById('videoPlayer');
+    //当前播放的视频
+    var currVideo=1;
+    //使用事件监听方式捕捉事件
+    video.addEventListener("timeupdate", function () {
+        //获取当前播放进度
+        time = Math.floor(video.currentTime);
+          if (time ==4) {//触发暂停事件
+            video.pause();
+            video.currentTime+=1;  
+            var reason=prompt("看到他们团聚，你有什么感受？", "");
+            while(reason!="感动") {//判断是否填写正确答案
+                alert("答案错误,请重新作答!!");
+                reason=prompt("看到他们团聚，你有什么感受？", "");
+            }
+            video.play();
+        }      
+ if (time ==8) {//触发暂停事件
+            video.pause();
+            video.currentTime+=1;  
+            var reason=prompt("如此极端的做法，换成你你会做吗？", "");
+            while(reason!="会") {//判断是否填写正确答案
+                alert("答案错误,请重新作答!!");
+                    reason=prompt("看到他们团聚，你有什么感受？", "");
+            }
+            video.play();
+}
+
+    }, false);
+</script>
+
+<script>
+    // 录音
+    var flage = true
+    var luyin = function () {
+        recOpen(
+            function () {
+                {
+                    rec.start();
+                    flage = false
+                }
+            }
+        )
+    }
+    var luyinst = function () {
+        recStop();
+    }
+    // 文字
+    let left = false;
+    var talk = document.getElementById('massge');
+    let send = function () {
+        let node = document.createElement('p');
+        let div = document.createElement('div');
+        div.className = 'wall';
+        let textNode = document.createTextNode(document.getElementById('qst').value);
+        node.appendChild(textNode);
+        node.className = 'ltalk';
+        div.appendChild(node);
+        talk.appendChild(div);
+        document.getElementById('qst').value = "";
+
+    }
+    let sendAll = function () {
+        send();
+        luyinst();
+
+    }
+
+</script>
+<!-- 导入录音模块 -->
+<script src="js/js/录音模块/recorder-core.js"></script>
+<script src="js/js/录音模块/engine/mp3.js"></script>
+<script src="js/js/录音模块/engine/mp3-engine.js"></script>
+<script src="js/js/录音模块/extensions/waveview.js"></script>
+<script src="js/js/index.js"></script>
+</body>
+</html>
